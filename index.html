@@ -121,8 +121,8 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
+                <!-- <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -130,8 +130,8 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
+                <!-- <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -140,8 +140,8 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
+                <!-- <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
@@ -150,8 +150,8 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
+                <!-- <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -160,8 +160,8 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
+                <!-- <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
@@ -285,10 +285,10 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
+        <!-- <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        </div> -->
       </div>
     </div>
     <!--/ Paper video. -->
@@ -301,41 +301,94 @@
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
+      <!-- Marker Writing Dataset -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Marker Writing Dataset</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Including 1000 trajectories, each lasting 15-30 seconds,
+            recorded as a robot moves a grasped marker to 8-12 randomly chosen locations within a 10 x 10 cm²
+            workspace to make linear strikes on paper.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <p>
+            The prediction task here is to predict the strike velocity (δx/δt, δy/δt), given the ReSkin tactile signals.
+          </p>
+          <!-- <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
                     type="video/mp4">
-          </video>
+          </video> -->
+        </div>
+      </div>
+      <!--/ Marker Writing Dataset -->
+
+      <!-- Intrinsic Slip Dataset. -->
+      <div class="column">
+        <h2 class="title is-3">Intrinsic Slip Dataset</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Including 1100 trajectories, each lasting 25-30 seconds,
+            recorded as a robot grasping and slipping along different boxes clamped to a table.
+            We used 10 distinct boxes and 4 sets of skins for 25 trajectories per combined pair.
+            </p>
+            <p>
+              The prediction task is to predict velocity and rotation of the end-effector (δx/δt, δy/δt, δθ/δt), given the ReSkin tactile signals.
+            </p>
+            <!-- <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Intrinsic Slip Dataset. -->
+    <div class="columns is-centered">
+
+      <!-- Joystick Control. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Joystick Control Dataset</h2>
+          <p>
+            Including 1000 trajectories, each lasting 25-40 seconds,
+            recorded as Allegro Hand with Xela sensors mounted on a Franka arm interacting with
+            an Extreme3D Pro Joystick controlled.
+          </p>
+          <p>
+            The prediction task here is to predict X, Y and Z-twis states from the joystick, given the Xela tactile signals.
+          </p>
+          <!-- <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video> -->
         </div>
       </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">IMU Datasets</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              RoNIN dataset:
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
+            <p>
+              VECTor dataset:
+            </p>
+            <p>
+              TotalCapture dataset:
+            </p>
+
           </div>
 
         </div>
       </div>
     </div>
     <!--/ Matting. -->
+
+
 
     <!-- Animation. -->
     <div class="columns is-centered">
