@@ -312,15 +312,28 @@
               <div class="content has-text-centered">
                 <p>
                   (Left) Flat SSM directly maps a sensor sequence to an output sequence.
+                </p>
+                <p>
                   (Right) <span class="dnerf">HiSS</span> divides an input sequence into chunks which are processed into <i>chunk features</i> by a low-level SSM.
                   A high-level SSM maps the resulting sequence to an output sequence.
                 </p>
               </div>
               <div class="content has-text-centered">
-
-                </video>
               </div>
               <!--/ Model Architecture. -->
+
+              <!-- Experiments and Results. -->
+              <h3 class="title is-4">Experiments and Results</h3>
+              <img src="./static/images/result_table.png" alt="HiSS Model Results">
+              <div class="content has-text-centered">
+                <p>
+                  Comparison of MSE prediction losses for flat and <span class="dnerf">HiSS</span> models on CSP-Bench. Reported numbers are averaged over 5 seeds for the best performing models.
+                  MW: Marker Writing, IS: Intrinsic Slip, R:RoNIN, V: VECTor, JC: Joystick Control, TC: TotalCapture
+                </p>
+              </div>
+              <div class="content has-text-centered">
+              </div>
+              <!--/ Experiments and Results. -->
 
             </div>
           </div>
