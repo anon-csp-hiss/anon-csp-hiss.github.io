@@ -251,6 +251,7 @@
 </section> -->
 
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -296,15 +297,42 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
 
+<section class="section">
+
+  <div class="container is-max-desktop">
+          <!-- HiSS. -->
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <h2 class="title is-3">HiSS: Hierarchical State Space Models</h2>
+
+              <!-- Model Architecture. -->
+              <h3 class="title is-4">Model Architecture</h3>
+              <img src="./static/images/model-fig.jpg" alt="HiSS Model Architecture">
+              <div class="content has-text-centered">
+                <p>
+                  (Left) Flat SSM directly maps a sensor sequence to an output sequence.
+                  (Right) <span class="dnerf">HiSS</span> divides an input sequence into chunks which are processed into <i>chunk features</i> by a low-level SSM.
+                  A high-level SSM maps the resulting sequence to an output sequence.
+                </p>
+              </div>
+              <div class="content has-text-centered">
+
+                </video>
+              </div>
+              <!--/ Model Architecture. -->
+
+            </div>
+          </div>
+          <!--/ HiSS. -->
+
+    <h2 class="title is-3">CSP Datasets</h2>
     <div class="columns is-centered">
 
       <!-- Marker Writing Dataset -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Marker Writing Dataset</h2>
+          <h3 class="title is-4">Marker Writing Dataset</h3>
           <p>
             Including 1000 trajectories, each lasting 15-30 seconds,
             recorded as a robot moves a grasped marker to 8-12 randomly chosen locations within a 10 x 10 cm²
@@ -322,7 +350,7 @@
       <!--/ Marker Writing Dataset -->
       <!-- Intrinsic Slip Dataset. -->
       <div class="column">
-        <h2 class="title is-3">Intrinsic Slip Dataset</h2>
+        <h3 class="title is-4">Intrinsic Slip Dataset</h3>
         <div class="columns is-centered">
           <div class="column content">
             <p>
@@ -347,7 +375,7 @@
       <!-- Joystick Control. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Joystick Control Dataset</h2>
+          <h3 class="title is-4">Joystick Control Dataset</h3>
           <p>
             Including 1000 trajectories, each lasting 25-40 seconds,
             recorded as Allegro Hand with Xela sensors mounted on a Franka arm interacting with
@@ -362,11 +390,11 @@
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
+      <!--/ Joystick Control. -->
 
-      <!-- Matting. -->
+      <!-- IMU Datasets. -->
       <div class="column">
-        <h2 class="title is-3">IMU Datasets</h2>
+        <h3 class="title is-4">IMU Datasets</h3>
         <div class="columns is-centered">
           <div class="column content">
             <p>
@@ -377,12 +405,12 @@
             </p>
             <p>
               <a
-              href="https://star-datasets.github.io/vector/">VECTor</a> - Indoor Multi-Sensor SLAM dataset collected by handheld platforms.
+              href="https://star-datasets.github.io/vector/">VECTor</a> - Indoor Multi-Sensor SLAM dataset collected by handheld platforms with versatile motion types.
 
             </p>
             <p>
               <a
-              href="https://cvssp.org/data/totalcapture/">TotalCapture</a> - 3D human pose estimation dataset with fully synchronised muli-view video, IMU and Vicon labelling.
+              href="https://cvssp.org/data/totalcapture/">TotalCapture</a> - 3D human pose estimation dataset with muli-view video, IMU and Vicon labelling.
             </p>
 
           </div>
@@ -390,101 +418,13 @@
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    <!--/ IMU Datasets. -->
 
 
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <!-- <h2 class="title is-3">Animation</h2> -->
-
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/> -->
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
 
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
