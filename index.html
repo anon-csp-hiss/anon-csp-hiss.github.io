@@ -311,35 +311,33 @@
             workspace to make linear strikes on paper.
           </p>
           <p>
-            The prediction task here is to predict the strike velocity (δx/δt, δy/δt), given the ReSkin tactile signals.
+            Prediction task: predict the strike velocity (δx/δt, δy/δt), given the ReSkin tactile signals.
           </p>
-          <!-- <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/marker_writing_990.mp4"
                     type="video/mp4">
-          </video> -->
+          </video>
         </div>
       </div>
       <!--/ Marker Writing Dataset -->
-
       <!-- Intrinsic Slip Dataset. -->
       <div class="column">
         <h2 class="title is-3">Intrinsic Slip Dataset</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              Including 1100 trajectories, each lasting 25-30 seconds,
+            Including 1100 trajectories, each lasting 25-30 seconds,
             recorded as a robot grasping and slipping along different boxes clamped to a table.
             We used 10 distinct boxes and 4 sets of skins for 25 trajectories per combined pair.
             </p>
             <p>
-              The prediction task is to predict velocity and rotation of the end-effector (δx/δt, δy/δt, δθ/δt), given the ReSkin tactile signals.
+            Prediction task: predict velocity and orientation of the end-effector (δx/δt, δy/δt, δθ/δt), given the ReSkin tactile signals.
             </p>
-            <!-- <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/intrinsic_slip.mp4"
                       type="video/mp4">
-            </video> -->
+            </video>
           </div>
-
         </div>
       </div>
     </div>
@@ -356,12 +354,12 @@
             an Extreme3D Pro Joystick controlled.
           </p>
           <p>
-            The prediction task here is to predict X, Y and Z-twis states from the joystick, given the Xela tactile signals.
+            Prediction task: predict X, Y and Z-twis states from the joystick, given the Xela tactile signals.
           </p>
-          <!-- <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/joystick_control_450.mp4"
                     type="video/mp4">
-          </video> -->
+          </video>
         </div>
       </div>
       <!--/ Visual Effects. -->
@@ -375,15 +373,16 @@
 
               <a
               href="https://ronin.cs.sfu.ca/">RoNIN</a>
+              - IMU data from smartphone from 100 human subjects with ground-truth 3D trajectories under natural human motions.
             </p>
             <p>
               <a
-              href="https://star-datasets.github.io/vector/">VECTor</a>
+              href="https://star-datasets.github.io/vector/">VECTor</a> - Indoor Multi-Sensor SLAM dataset collected by handheld platforms.
 
             </p>
             <p>
               <a
-              href="https://cvssp.org/data/totalcapture/">TotalCapture</a>
+              href="https://cvssp.org/data/totalcapture/">TotalCapture</a> - 3D human pose estimation dataset with fully synchronised muli-view video, IMU and Vicon labelling.
             </p>
 
           </div>
