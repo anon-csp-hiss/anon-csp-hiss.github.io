@@ -405,41 +405,74 @@
       </div>
       <!--/ Joystick Control. -->
 
-      <!-- IMU Datasets. -->
+      <!-- RoNIN Datasets. -->
       <div class="column">
-        <h3 class="title is-4">IMU Datasets</h3>
+        <h3 class="title is-4">RoNIN Datasets</h3>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-
               <a
               href="https://ronin.cs.sfu.ca/">RoNIN</a>
               - IMU data from smartphone from 100 human subjects with ground-truth 3D trajectories under natural human motions.
             </p>
-            <p>
-              <a
-              href="https://star-datasets.github.io/vector/">VECTor</a> - Indoor Multi-Sensor SLAM dataset collected by handheld platforms with versatile motion types.
 
-            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ RoNIN Datasets. -->
+
+    <div class="columns is-centered">
+
+      <!-- Vector Dataset. -->
+      <div class="column">
+        <div class="content">
+          <h3 class="title is-4">VECTor Dataset</h3>
+          <p>
+            <a
+            href="https://star-datasets.github.io/vector/">VECTor</a> - Indoor Multi-Sensor SLAM dataset collected by handheld platforms with versatile motion types.
+          </p>
+          <p>
+            Prediction task: predict X, Y and Z axes velocity, given the IMU acceleration and gyroscope readings.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="150%">
+            <source src="./static/videos/vector_desk_normal.mp4"
+                    type="video/mp4">
+          </video>
+          <p style="text-align: center;">
+            VECTor Desk Normal sequence
+          </p>
+        </div>
+      </div>
+      <!--/Vector Dataset. -->
+
+      <!-- TotalCapture Datasets. -->
+      <div class="column">
+        <h3 class="title is-4">IMU Datasets</h3>
+        <div class="columns is-centered">
+          <div class="column content">
 
             <p>
               <a
               href="https://cvssp.org/data/totalcapture/">TotalCapture</a> - 3D human pose estimation dataset with muli-view video, IMU and Vicon labelling.
             </p>
+            <p>
+              Prediction task: predict X, Y and Z axes velocity, given the IMU acceleration and orientation readings.
+            </p>
             <video id="dollyzoom" autoplay controls muted loop playsinline height="150%">
-              <source src="./static/videos/vector_desk_normal.mp4"
+              <source src="./static/videos/acting1_stitched_output.mp4"
                       type="video/mp4">
             </video>
             <p style="text-align: center;">
-              VECTor Desk Normal sequence
+              ToalCapture S1 acting1 sequence
             </p>
           </div>
 
         </div>
       </div>
     </div>
-    <!--/ IMU Datasets. -->
-
+    <!--/ TotalCapture Datasets. -->
 
 
 
