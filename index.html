@@ -139,15 +139,15 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
-                <!-- <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark"> -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <!-- <a href="https://github.com/google/nerfies"
@@ -156,6 +156,7 @@
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
+
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -286,10 +287,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
-        <!-- <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div> -->
+        <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/hiss_video.mp4"
+                  type="video/mp4">
+        </video>
+
       </div>
     </div>
     <!--/ Paper video. -->
@@ -328,7 +330,7 @@
               <div class="content has-text-centered">
                 <p>
                   Comparison of MSE prediction losses for flat and <span class="dnerf">HiSS</span> models on CSP-Bench. Reported numbers are averaged over 5 seeds for the best performing models.
-                  MW: Marker Writing, IS: Intrinsic Slip, R:RoNIN, V: VECTor, JC: Joystick Control, TC: TotalCapture
+                  MW: Marker Writing, IS: Intrinsic Slip, R:RoNIN, V: VECtor, JC: Joystick Control, TC: TotalCapture
                 </p>
               </div>
               <div class="content has-text-centered">
@@ -438,10 +440,10 @@
       <!-- Vector Dataset. -->
       <div class="column">
         <div class="content">
-          <h3 class="title is-4">VECTor Dataset</h3>
+          <h3 class="title is-4">VECtor Dataset</h3>
           <p>
             <a
-            href="https://star-datasets.github.io/vector/">VECTor</a> - Indoor Multi-Sensor SLAM dataset collected by handheld platforms with versatile motion types.
+            href="https://star-datasets.github.io/vector/">VECtor</a> - Indoor Multi-Sensor SLAM dataset collected by handheld platforms with versatile motion types.
           </p>
           <p>
             Prediction task: predict X, Y and Z axes velocity, given the IMU acceleration and gyroscope readings.
@@ -451,7 +453,7 @@
                     type="video/mp4">
           </video>
           <p style="text-align: center;">
-            VECTor Desk Normal sequence
+            VECtor Desk Normal sequence
           </p>
         </div>
       </div>
@@ -468,7 +470,7 @@
               href="https://cvssp.org/data/totalcapture/">TotalCapture</a> - 3D human pose estimation dataset with muli-view video, IMU and Vicon labelling.
             </p>
             <p>
-              Prediction task: predict X, Y and Z axes velocity, given the IMU acceleration and orientation readings.
+              Prediction task: predict X, Y and Z axes velocity of 21 joints, given the 12 IMUs' acceleration and orientation readings.
             </p>
             <video id="dollyzoom" autoplay controls muted loop playsinline height="150%">
               <source src="./static/videos/acting1_stitched_output.mp4"
