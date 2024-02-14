@@ -263,14 +263,10 @@
           <p>
             Reasoning from sequences of raw sensory data is a ubiquitous problem across fields ranging from medical devices to robotics.
             These problems often involve using long sequences of raw sensor data (e.g. magnetometers, piezoresistors) to predict
-            sequences of desirable physical quantities (e.g. force, inertial measurements).
-          </p>
-          <p>
-            While classical approaches are powerful for locally-linear prediction problems, they often fall short when using real-world sensors.
+            sequences of desirable physical quantities (e.g. force, inertial measurements).While classical approaches are powerful for locally-linear prediction problems, 
+            they often fall short when using real-world sensors.
             These sensors are typically non-linear, are affected by extraneous variables (e.g. vibration), and exhibit data-dependent drift.
             For many problems, the prediction task is exacerbated by small labeled datasets since obtaining ground-truth labels requires expensive equipment.
-          </p>
-          <p>
             In this work, we present Hierarchical State-Space Models (<span class="dnerf">HiSS</span>), a conceptually simple, new technique for continuous sequential prediction.
             <span class="dnerf">HiSS</span> stacks structured state-space models on top of each other to create a temporal hierarchy.
             Across six real-world sensor datasets, from tactile-based state prediction to accelerometer-based inertial measurement,
